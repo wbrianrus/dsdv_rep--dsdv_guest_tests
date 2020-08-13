@@ -36,7 +36,7 @@ view: usafacts_summary {
 
   dimension: is_latest_date {
     type: yesno
-    sql: MAX(${TABLE}.date) == ${TABLE}.date ;;
+    sql: MAX(${TABLE}.date) = ${TABLE}.date ;;
   }
 
 
