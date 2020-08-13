@@ -10,4 +10,4 @@ datagroup: dsdv_guest_tests_default_datagroup {
 
 persist_with: dsdv_guest_tests_default_datagroup
 
-explore: usafacts_summary {}
+explore: covid_nyt_us_states {}
