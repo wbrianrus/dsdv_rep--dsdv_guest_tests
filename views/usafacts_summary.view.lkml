@@ -28,6 +28,11 @@ view: usafacts_summary {
   }
 
 
+  measure: last_updated_date {
+    type: date
+    sql: MAX(${TABLE}.date) ;;
+    convert_tz: no
+  }
 
 
   measure: diff_num_cases {
