@@ -34,6 +34,11 @@ view: usafacts_summary {
     convert_tz: no
   }
 
+  dimension: is_latest_date {
+    type: yesno
+    sql: MAX(${TABLE}.date) == ${TABLE}.date ;;
+  }
+
 
   measure: diff_num_cases {
     type: number
