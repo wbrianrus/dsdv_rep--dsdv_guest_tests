@@ -27,18 +27,21 @@ view: usafacts_summary {
     sql: ${TABLE}.date ;;
   }
 
-  dimension: diff_num_cases {
-    type: string
+
+
+
+  measure: diff_num_cases {
+    type: number
     sql: ${TABLE}.diff_num_cases ;;
   }
 
-  dimension: num_cases {
-    type: string
+  measure: num_cases {
+    type: number
     sql: ${TABLE}.num_cases ;;
   }
 
-  dimension: num_deaths {
-    type: string
+  measure: num_deaths {
+    type: number
     sql: ${TABLE}.num_deaths ;;
   }
 
@@ -47,8 +50,8 @@ view: usafacts_summary {
     sql: ${TABLE}.population ;;
   }
 
-  dimension: prev_num_cases {
-    type: string
+  measure: prev_num_cases {
+    type: number
     sql: ${TABLE}.prev_num_cases ;;
   }
 
@@ -64,6 +67,6 @@ view: usafacts_summary {
 
   measure: count {
     type: count
-    drill_fields: [county_name]
+    drill_fields: [state,county_fips_code]
   }
 }
