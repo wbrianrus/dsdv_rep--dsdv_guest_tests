@@ -23,7 +23,7 @@ view: covid_nyt_us_states {
   }
 
 
-  measure: last_updated_date {
+  measure: latest_date {
     type: date
     sql: MAX(${TABLE}.date) ;;
     convert_tz: no
@@ -31,7 +31,7 @@ view: covid_nyt_us_states {
 
   dimension: is_latest_date {
     type: yesno
-    sql: MAX(last_updated_date) = ${TABLE}.date ;;
+    sql: MAX(${TABLE}.date) = ${TABLE}.date ;;
   }
 
   dimension: deaths {
